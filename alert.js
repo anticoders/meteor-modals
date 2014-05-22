@@ -1,4 +1,14 @@
+Template.crater_alert.helpers({
+  
+  titleOrCloser: function() {
+    return this.title || this.closer,
+  },
 
+  okOrCancel: function() {
+    return this.ok || this.cancel,
+  },
+
+});
 
 var displayAlert = function(data, options, callback) {
   var param = {};
