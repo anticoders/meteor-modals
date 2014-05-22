@@ -22,5 +22,63 @@
 
 
 
+.crater-alert-header {
+  height: 48px;
+  font-size: 20px;
+  line-height: 48px;
+  background: #f0f0f0;
+  padding: 0px 20px;
 
+  /*border-bottom: 1px solid rgba(0,0,0,0.75);*/
+}
+
+.crater-alert-body {
+  padding: 20px 20px 50px 20px;
+}
+
+.crater-alert-footer {
+  text-align: right;
+  height: 48px;
+  line-height: 48px;
+  padding: 0px 20px;
+  /*border-top: 1px solid rgba(0,0,0,0.75);*/
+  background: #e0e0e0;
+}
+
+
+
+.crater-alert-button {
+  display: inline-block;
+  padding: 0px 20px;
+  margin: 0px 10px;
+  height: 32px;
+  line-height: 32px;
+  background: #606060;
+  color: #f0f0f0;
+  border-radius: 3px;
+  cursor: default;
+}
+
+.crater-alert-button:hover {
+  background: #808080;
+  color: #ffffff;
+}
+
+.crater-alert-button-action {
+  background: #80c020;
+}
+
+.crater-alert-button-action:hover {
+  background: #b0e060;
+}
+
+
+input[type=text].crater-alert-prompt {
+  background: #ffffff;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  padding: 0px 3px;
+  color: #303030;
+}
 

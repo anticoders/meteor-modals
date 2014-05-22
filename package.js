@@ -17,6 +17,7 @@ Package.on_use(function (api, where) {
     'alert.html',
     'alert.js',
     'alert.css',
+    'displayAlert.js',
 
   ], 'client');
 

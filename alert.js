@@ -10,60 +10,20 @@ Template.crater_alert.helpers({
 
 });
 
-var displayAlert = function(data, options, callback) {
-  var param = {};
-  if(typeof options === 'string') {
-    data.message = options;
-    param.data = data;
-  } else {
-    _.extend(data, options);
-    param.data = data;
-    _.extend(param, options);
-  }
+Template.crater_alert.events({
+  'click .crater-alert-button-cancel, click .crater-alert-closer': function(e, t) {
+    Crater.dismissOverlay(e.target, null, null);
+  },
 
-  return Crater.overlay('crater_alert', param, callback);
-};
-
-Crater.alert = function(options, callback) {
-  return displayAlert({
-    title: false,
-    closer: false,
-
-    message: '',
-    prompt: false,
-    value: '',
-
-    cancel: false,
-    ok: 'OK',
-  }, options, callback);
-};
-
-Crater.confirm = function(options, callback) {
-  return displayAlert({
-    title: false,
-    closer: false,
-    
-    message: '',
-    prompt: false,
-    value: '',
-
-    cancel: 'CANCEL',
-    ok: 'OK',
-  }, options, callback);
-};
-
-Crater.prompt = function(options, callback) {
-  return displayAlert({
-    title: false,
-    closer: false,
-    
-    message: '',
-    prompt: true,
-    value: '',
-
-    cancel: 'CANCEL',
-    ok: 'OK',
-  }, options, callback);
-};
+  'click .crater-alert-button-action': function(e, t) {
+    if(t.data.prompt) {
+      Crater.dismissOverlay(e.target, null, {
+        value: t.$('.crater-alert-prompt').val(),
+      });
+    } else {
+      Crater.dismissOverlay(e.target, null, true);
+    }
+  },
+});
 
 
