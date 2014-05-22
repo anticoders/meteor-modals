@@ -1,11 +1,11 @@
 Template.crater_alert.helpers({
-  
+
   titleOrCloser: function() {
-    return this.title || this.closer,
+    return this.title || this.closer;
   },
 
   okOrCancel: function() {
-    return this.ok || this.cancel,
+    return this.ok || this.cancel;
   },
 
 });
