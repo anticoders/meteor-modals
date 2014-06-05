@@ -23,13 +23,30 @@
 
 
 .crater-alert-header {
+  position: relative;
   height: 48px;
   font-size: 20px;
   line-height: 48px;
   background: #f0f0f0;
-  padding: 0px 20px;
+  
 
   /*border-bottom: 1px solid rgba(0,0,0,0.75);*/
+}
+
+.crater-alert-title {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.crater-alert-closer {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
 }
 
 .crater-alert-body {
