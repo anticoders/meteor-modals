@@ -47,6 +47,8 @@
   height: 48px;
   text-align: center;
   line-height: 48px;
+
+  cursor: pointer;
 }
 
 .crater-alert-body {
