@@ -1,11 +1,14 @@
 
 
 Package.describe({
-  summary: "Handy UI Library for Meteor"
+  summary:  "Modals and dialogs: the Meteor way",
+  name:     "anti:modals",
+  version:  "0.1.0",
+  git:      "https://github.com/anticoders/meteor-modals.git",
 });
 
 Package.on_use(function (api, where) {
-
+  api.versionsFrom('0.9.0');
   api.use(['deps', 'underscore', 'templating', 'spacebars', 'ui'], 'client');
 
   api.export('Crater', 'client');
