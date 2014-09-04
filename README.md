@@ -8,6 +8,8 @@ Usage
 
     meteor add anti:modals
 
+Demo app: [https://github.com/anticoders/meteor-modals-demo](https://github.com/anticoders/meteor-modals-demo).
+
 API
 ---
 
