@@ -11,33 +11,43 @@ Usage
 API
 ===
 
+- overlay
+- dismissOverlay
 - alert
 - confirm
 - prompt
-- overlay
-- dismissOverlay
 
 
-`AntiModals.alert()`
---------------------
-
-
-`AntiModals.confirm()`
-----------------------
-
-
-
-`AntiModals.prompt()`
----------------------
 
 
 `AntiModals.overlay()`
 ----------------------
 
+Display given template as a dialog.
+
 
 `AntiModals.dismissOverlay()`
 -----------------------------
 
+Dismiss displayed dialog.
+
+
+`AntiModals.alert()`
+--------------------
+
+Display alert dialog.
+
+
+`AntiModals.confirm()`
+----------------------
+
+Display confirm dialog.
+
+
+`AntiModals.prompt()`
+---------------------
+
+Display prompt dialog.
 
 
 
