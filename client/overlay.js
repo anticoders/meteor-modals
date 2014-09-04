@@ -45,6 +45,10 @@ AntiModals.overlay = function(template, options, callback) {
     });
   }
 
+  $overlay.find('.anti-modal-closer').click(function(e) {
+    AntiModals.dismissOverlay(overlay);
+  });
+
   overlay.__craterCallback = callback;
   $('body').append(overlay);
 
