@@ -4,12 +4,12 @@ anti:modals
 Modals and dialogs: the Meteor way
 
 Usage
-=====
+-----
 
     meteor add anti:modals
 
 API
-===
+---
 
 - [overlay](#antimodalsoverlay)
 - [dismissOverlay](#antimodalsdismissoverlay)
@@ -17,39 +17,44 @@ API
 - [confirm](#antimodalsconfirm)
 - [prompt](#antimodalsprompt)
 
+---
 
 
-
-`AntiModals.overlay()`
-----------------------
+### `AntiModals.overlay()`
 
 Display given template as a dialog.
 
 
-`AntiModals.dismissOverlay()`
------------------------------
+---
+
+### `AntiModals.dismissOverlay()`
 
 Dismiss displayed dialog.
 
 
-`AntiModals.alert()`
---------------------
+---
+
+### `AntiModals.alert()`
+
 
 Display alert dialog.
 
 
-`AntiModals.confirm()`
-----------------------
+---
+
+### `AntiModals.confirm()`
 
 Display confirm dialog.
 
 
-`AntiModals.prompt()`
----------------------
+---
+
+### `AntiModals.prompt()`
 
 Display prompt dialog.
 
 
+---
 
 
 
