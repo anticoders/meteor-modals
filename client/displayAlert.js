@@ -10,11 +10,10 @@ var displayAlert = function(data, options, callback) {
     _.extend(param, options);
   }
 
-  return Crater.overlay('crater_alert', param, callback);
+  return AntiModals.overlay('__antiModals__alert', param, callback);
 };
 
 AntiModals.alert = function(options, callback) {
-  console.log("CRA");
   return displayAlert({
     title: false,
     closer: false,
@@ -22,6 +21,7 @@ AntiModals.alert = function(options, callback) {
     message: '',
     prompt: false,
     value: '',
+    placeholder: '',
 
     cancel: false,
     ok: 'OK',
@@ -36,6 +36,7 @@ AntiModals.confirm = function(options, callback) {
     message: '',
     prompt: false,
     value: '',
+    placeholder: '',
 
     cancel: 'CANCEL',
     ok: 'OK',
@@ -50,6 +51,7 @@ AntiModals.prompt = function(options, callback) {
     message: '',
     prompt: true,
     value: '',
+    placeholder: '',
 
     cancel: 'CANCEL',
     ok: 'OK',

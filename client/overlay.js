@@ -17,13 +17,13 @@ AntiModals.overlay = function(template, options, callback) {
     callback = options;
     options = {};
   }
-  callback = callback || options.callback;
   options = options || {};
-
+  callback = callback || options.callback;
+  
   
   var overlay = document.createElement('div');
   var $overlay = $(overlay);
-  $overlay.addClass('crater-overlay');
+  $overlay.addClass('anti-modal-overlay');
 
 
   if(options.overlayClass) {
@@ -45,7 +45,7 @@ AntiModals.overlay = function(template, options, callback) {
     });
   }
 
-  div.__craterCallback = callback;
+  overlay.__craterCallback = callback;
   $('body').append(overlay);
 
   if(options.animateIn) {
@@ -62,7 +62,7 @@ AntiModals.overlay = function(template, options, callback) {
 
 AntiModals.dismissOverlay = function(element, error, data) {
   /* Get overlay */
-  var overlay = $(element).closest('.crater-overlay');
+  var overlay = $(element).closest('.anti-modal-overlay');
 
   if(!overlay || !overlay.get() || !overlay.get()[0]) return;
 

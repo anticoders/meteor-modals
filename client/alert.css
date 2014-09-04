@@ -1,5 +1,5 @@
 
-.crater-overlay {
+.anti-modal-overlay {
   background: rgba(0,0,0,0.75);
   position: fixed;
   left: 0px;
@@ -10,35 +10,38 @@
 }
 
 
-.crater-alert-box {
+.anti-modal-box {
   width: 500px;
   min-height: 50px;
   margin: 100px auto 0px auto;
 
   background: #f0f0f0;
   color: #303030;
-  box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.125), 0px 0px 0px 2px rgba(255,255,255,0.125);
+
+  font-family: sans-serif;
+  box-shadow: 0px 0px 5px rgba(0,0,0,1);
+  border: 1px solid #000;
 }
 
 
 
-.crater-alert-header {
+.anti-modal-header {
   position: relative;
   height: 48px;
   font-size: 20px;
   line-height: 48px;
   background: #f0f0f0;
-  
+  color: #aaa;
 
-  /*border-bottom: 1px solid rgba(0,0,0,0.75);*/
+  border-bottom: 1px solid rgba(0,0,0,0.75);
 }
 
-.crater-alert-title {
+.anti-modal-title {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 16px;
 }
 
-.crater-alert-closer {
+.anti-modal-closer {
   display: block;
   position: absolute;
   right: 0px;
@@ -51,53 +54,62 @@
   cursor: pointer;
 }
 
-.crater-alert-body {
-  padding: 20px 20px 50px 20px;
+.anti-modal-body {
+  padding: 20px 20px 20px 20px;
 }
 
-.crater-alert-footer {
+.anti-modal-footer {
   text-align: right;
   height: 48px;
   line-height: 48px;
-  padding: 0px 20px;
+  padding: 0px 8px;
   /*border-top: 1px solid rgba(0,0,0,0.75);*/
   background: #e0e0e0;
 }
 
 
 
-.crater-alert-button {
+.anti-modal-button {
   display: inline-block;
+  vertical-align: middle;
+
   padding: 0px 20px;
-  margin: 0px 10px;
+  margin-right: 8px;
   height: 32px;
   line-height: 32px;
   background: #606060;
   color: #f0f0f0;
   border-radius: 3px;
-  cursor: default;
+  cursor: pointer;
+
+  font-size: 14px;
+  border: 0px solid #000;
 }
 
-.crater-alert-button:hover {
+.anti-modal-button:hover {
   background: #808080;
   color: #ffffff;
 }
 
-.crater-alert-button-action {
+.anti-modal-button-action {
   background: #80c020;
 }
 
-.crater-alert-button-action:hover {
+.anti-modal-button-action:hover {
   background: #b0e060;
 }
 
 
-input[type=text].crater-alert-prompt {
+input[type=text].anti-modal-prompt {
   background: #ffffff;
   height: 30px;
   line-height: 30px;
-  font-size: 20px;
-  padding: 0px 3px;
-  color: #303030;
+  font-size: 14px;
+  padding: 0px 6px;
+  color: #333;
+  margin-top: 8px;
+  border: 0px;
+  border-radius: 5px;
+  box-shadow: -1px -1px 3px rgba(0,0,0,0.125) inset;
 }
 

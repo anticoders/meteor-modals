@@ -1,32 +1,32 @@
-<template name="crater_alert">
+<template name="__antiModals__alert">
 
-  <div class="crater-alert-box">
+  <div class="anti-modal-box">
 
     {{#if titleOrCloser}}
-      <div class="crater-alert-header">
+      <div class="anti-modal-header">
         {{#if title}}
-          <span class="crater-alert-title">{{{title}}}</span>
+          <span class="anti-modal-title">{{{title}}}</span>
         {{/if}}
         {{#if closer}}
-          <span class="crater-alert-closer">&times;</span>
+          <span class="anti-modal-closer">&times;</span>
         {{/if}}
       </div>
     {{/if}}
       
-    <div class="crater-alert-body">
+    <div class="anti-modal-body">
       {{{message}}}
       {{#if prompt}}
-        <div><input class="crater-alert-prompt" type="text" value="{{value}}"/></div>
+        <div><input class="anti-modal-prompt" type="text" value="{{value}}" placeholder="{{placeholder}}"/></div>
       {{/if}}
     </div>
 
     {{#if okOrCancel}}
-      <div class="crater-alert-footer">
+      <div class="anti-modal-footer">
         {{#if cancel}}
-          <span class="crater-alert-button crater-alert-button-cancel">{{cancel}}</span>
+          <button class="anti-modal-button anti-modal-button-cancel">{{cancel}}</button>
         {{/if}}
         {{#if ok}}
-          <span class="crater-alert-button crater-alert-button-action">{{ok}}</span>
+          <button class="anti-modal-button anti-modal-button-action">{{ok}}</button>
         {{/if}}
       </div>
     {{/if}}

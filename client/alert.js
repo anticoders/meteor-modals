@@ -1,4 +1,4 @@
-Template.crater_alert.helpers({
+Template.__antiModals__alert.helpers({
 
   titleOrCloser: function() {
     return this.title || this.closer;
@@ -10,20 +10,31 @@ Template.crater_alert.helpers({
 
 });
 
-Template.crater_alert.events({
-  'click .crater-alert-button-cancel, click .crater-alert-closer': function(e, t) {
-    Crater.dismissOverlay(e.target, null, null);
+Template.__antiModals__alert.events({
+
+  'click .anti-modal-button-cancel, click .anti-modal-closer': function(e, t) {
+    AntiModals.dismissOverlay(e.target, null, null);
   },
 
-  'click .crater-alert-button-action': function(e, t) {
+  'click .anti-modal-button-action': function(e, t) {
     if(t.data.prompt) {
-      Crater.dismissOverlay(e.target, null, {
-        value: t.$('.crater-alert-prompt').val(),
+      AntiModals.dismissOverlay(e.target, null, {
+        value: t.$('.anti-modal-prompt').val(),
       });
     } else {
-      Crater.dismissOverlay(e.target, null, true);
+      AntiModals.dismissOverlay(e.target, null, true);
     }
   },
+
+  'keydown .anti-modal-prompt': function(e, t) {
+    if(e.keyCode !== 13) return;
+
+    AntiModals.dismissOverlay(e.target, null, {
+      value: t.$('.anti-modal-prompt').val(),
+    });
+  },
+
+
 });
 
 
