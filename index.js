@@ -1,2 +1,0 @@
-Crater = Crater || {};
-

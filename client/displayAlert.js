@@ -13,7 +13,8 @@ var displayAlert = function(data, options, callback) {
   return Crater.overlay('crater_alert', param, callback);
 };
 
-Crater.alert = function(options, callback) {
+AntiModals.alert = function(options, callback) {
+  console.log("CRA");
   return displayAlert({
     title: false,
     closer: false,
@@ -27,7 +28,7 @@ Crater.alert = function(options, callback) {
   }, options, callback);
 };
 
-Crater.confirm = function(options, callback) {
+AntiModals.confirm = function(options, callback) {
   return displayAlert({
     title: false,
     closer: false,
@@ -41,7 +42,7 @@ Crater.confirm = function(options, callback) {
   }, options, callback);
 };
 
-Crater.prompt = function(options, callback) {
+AntiModals.prompt = function(options, callback) {
   return displayAlert({
     title: false,
     closer: false,
