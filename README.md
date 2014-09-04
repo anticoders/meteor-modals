@@ -11,11 +11,11 @@ Usage
 API
 ===
 
-- [overlay](#overlay)
-- [dismissOverlay](#dismissOverlay)
-- [alert](#alert)
-- [confirm](#confirm)
-- [prompt](#prompt)
+- [overlay](#antimodalsoverlay)
+- [dismissOverlay](#antimodalsdismissoverlay)
+- [alert](#antimodalsalert)
+- [confirm](#antimodalsconfirm)
+- [prompt](#antimodalsprompt)
 
 
 
