@@ -11,11 +11,11 @@ Usage
 API
 ===
 
-- overlay
-- dismissOverlay
-- alert
-- confirm
-- prompt
+- [overlay](#overlay)
+- [dismissOverlay](#dismissOverlay)
+- [alert](#alert)
+- [confirm](#confirm)
+- [prompt](#prompt)
 
 
 
