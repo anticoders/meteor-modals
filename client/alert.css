@@ -7,6 +7,7 @@
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  z-index: 65536;
 }
 
 
@@ -32,8 +33,6 @@
   line-height: 48px;
   background: #f0f0f0;
   color: #aaa;
-
-  border-bottom: 1px solid rgba(0,0,0,0.75);
 }
 
 .anti-modal-title {
