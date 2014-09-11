@@ -36,7 +36,8 @@ AntiModals.overlay = function(template, options, callback) {
   }
 
   $overlay.hide();
-  UI.insert(UI.renderWithData(Template[template], options.data), overlay);
+
+  overlay.__antiModalsView = Blaze.renderWithData(Template[template], options.data, overlay);
   
   if(!options.modal) {
     $overlay.click(function(e) {
@@ -49,7 +50,7 @@ AntiModals.overlay = function(template, options, callback) {
     AntiModals.dismissOverlay(overlay);
   });
 
-  overlay.__craterCallback = callback;
+  overlay.__antiModalsCallback = callback;
   $('body').append(overlay);
 
   if(options.animateIn) {
@@ -58,7 +59,7 @@ AntiModals.overlay = function(template, options, callback) {
     $overlay.fadeIn(300);  
   }
 
-  if(options.animateOut) overlay.__craterAnimateOut = options.animateOut;
+  if(options.animateOut) overlay.__antiModalsAnimateOut = options.animateOut;
   return overlay;
 };
 
@@ -66,26 +67,28 @@ AntiModals.overlay = function(template, options, callback) {
 
 AntiModals.dismissOverlay = function(element, error, data) {
   /* Get overlay */
-  var overlay = $(element).closest('.anti-modal-overlay');
+  var $overlay = $(element).closest('.anti-modal-overlay');
 
-  if(!overlay || !overlay.get() || !overlay.get()[0]) return;
+  if(!$overlay || !$overlay.get() || !$overlay.get()[0]) return;
 
-  var overlayDiv = overlay.get()[0];
+  var overlayDiv = $overlay.get()[0];
 
 
   /* Callback */
-  if(overlayDiv.__craterCallback) {
-    overlayDiv.__craterCallback(error, data);
+  if(overlayDiv.__antiModalsCallback) {
+    overlayDiv.__antiModalsCallback(error, data);
   }
 
   /* Dismiss */
-  if(overlayDiv.__craterAnimateOut) {
-    overlayDiv.__craterAnimateOut(overlayDiv, function() {
-      overlay.remove();
+  if(overlayDiv.__antiModalsAnimateOut) {
+    overlayDiv.__antiModalsAnimateOut(overlayDiv, function() {
+      Blaze.remove(overlayDiv.__antiModalsView);
+      $overlay.remove();
     });
   } else {
-    overlay.fadeOut(300, function(){
-      overlay.remove();
+    $overlay.fadeOut(300, function(){
+      Blaze.remove(overlayDiv.__antiModalsView);
+      $overlay.remove();
     });  
   }
   

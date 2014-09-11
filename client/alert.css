@@ -24,6 +24,9 @@
   border: 1px solid #000;
 }
 
+.anti-modal-box-narrow {
+  width: 300px;
+}
 
 
 .anti-modal-header {
