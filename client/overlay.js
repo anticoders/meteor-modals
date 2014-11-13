@@ -95,5 +95,13 @@ AntiModals.dismissOverlay = function(element, error, data) {
 };
 
 
+AntiModals.dismissAll = function(error, data) {
+  $('.anti-modal-overlay').each(function() {
+    AntiModals.dismissOverlay(this, error, data);
+  });
+
+};
+
+
 
 

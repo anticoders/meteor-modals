@@ -3,7 +3,7 @@
 Package.describe({
   summary:  "Modals and dialogs: the Meteor way",
   name:     "anti:modals",
-  version:  "0.3.0",
+  version:  "0.4.0",
   git:      "https://github.com/anticoders/meteor-modals.git",
 });
 

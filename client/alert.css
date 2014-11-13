@@ -1,4 +1,7 @@
 
+/* Overlay */
+/* ============================================================ */
+
 .anti-modal-overlay {
   background: rgba(0,0,0,0.75);
   position: fixed;
@@ -11,6 +14,9 @@
 }
 
 
+/* Box */
+/* ============================================================ */
+
 .anti-modal-box {
   width: 500px;
   min-height: 50px;
@@ -20,14 +26,21 @@
   color: #303030;
 
   font-family: sans-serif;
-  box-shadow: 0px 0px 5px rgba(0,0,0,1);
-  border: 1px solid #000;
 }
 
 .anti-modal-box-narrow {
   width: 300px;
 }
 
+.anti-modal-overlay .anti-modal-box {
+  border: 1px solid #000;
+  box-shadow: 0px 0px 5px rgba(0,0,0,1);
+}
+
+
+
+/* Header */
+/* ============================================================ */
 
 .anti-modal-header {
   position: relative;
@@ -36,6 +49,11 @@
   line-height: 48px;
   background: #f0f0f0;
   color: #aaa;
+  text-align: center;
+}
+
+.anti-modal-overlay .anti-modal-header {
+  text-align: left;
 }
 
 .anti-modal-title {
@@ -44,7 +62,7 @@
 }
 
 .anti-modal-closer {
-  display: block;
+  display: none;
   position: absolute;
   right: 0px;
   top: 0px;
@@ -56,9 +74,24 @@
   cursor: pointer;
 }
 
+.anti-modal-overlay .anti-modal-closer {
+  display: block;
+}
+
+
+
+/* Body */
+/* ============================================================ */
+
+
 .anti-modal-body {
   padding: 20px 20px 20px 20px;
 }
+
+
+
+/* Footer */
+/* ============================================================ */
 
 .anti-modal-footer {
   text-align: right;
@@ -70,6 +103,8 @@
 }
 
 
+/* Form elements */
+/* ============================================================ */
 
 .anti-modal-button {
   display: inline-block;
