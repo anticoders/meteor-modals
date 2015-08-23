@@ -18,7 +18,7 @@
 /* ============================================================ */
 
 .anti-modal-box {
-  width: 500px;
+  width: 80%;
   min-height: 50px;
   margin: 100px auto 0px auto;
 
@@ -29,7 +29,7 @@
 }
 
 .anti-modal-box-narrow {
-  width: 300px;
+  width: 70%;
 }
 
 .anti-modal-overlay .anti-modal-box {
