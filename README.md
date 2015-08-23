@@ -29,7 +29,7 @@ Display given template as a dialog.
 
 ---
 
-### `AntiModals.dismissOverlay()`
+### `AntiModals.dismissOverlay($('.anti-modal-overlay'))`
 
 Dismiss displayed dialog.
 
